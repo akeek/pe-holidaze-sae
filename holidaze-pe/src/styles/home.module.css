@@ -23,10 +23,10 @@
     width: 100%;
     top: 70%;
     color: white;
+    text-align: center;
 }
 
 .discover {
-    text-align: center;
     font-size: 1.5rem;
     padding: 0;
     margin-bottom: 2px;
