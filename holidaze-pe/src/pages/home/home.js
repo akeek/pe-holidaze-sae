@@ -1,5 +1,5 @@
 import React from "react";
-import RecentVenues from "./recent";
+import RecentVenues from "./latest";
 import styles from "../../styles/home.module.css";
 import { Link } from "react-router-dom";
 
@@ -8,12 +8,15 @@ function Home() {
     <div>
       <div className={styles.bannerContainer}>
         <div className={styles.homeBanner}>
-          <h2>FIND YOUR VENUE</h2>
-          <Link to="/venues">
-            <button className={styles.bannerBtn}>HERE</button>
-          </Link>
+          <div className={styles.blur}>
+            <p className={styles.discover}>Discover more</p>
+            <Link to="/venues">
+              <button className={styles.bannerBtn}>Venues</button>
+            </Link>
+          </div>
         </div>
       </div>
+      <hr></hr>
       <RecentVenues />
     </div>
   );

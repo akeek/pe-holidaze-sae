@@ -1,13 +1,12 @@
 .loginContainer{
-    background-color: rgba(245, 244, 244, 0.649);
-    width: 40%;
+    background-color: rgba(245, 244, 244, 0.768);
+    width: 50%;
     text-align: center;
     margin: 0 auto;
     padding: 50px;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 100px;
     border-radius: 20px;
-    box-shadow: -7px 18px 36px -6px rgba(0,0,0,0.75);
 }
 
 .input {

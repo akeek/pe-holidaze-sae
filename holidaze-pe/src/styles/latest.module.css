@@ -43,9 +43,9 @@
 }
 
 .grid {
+    width: 95%;
     padding: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 auto;
 }
 
 .carousel {
@@ -58,10 +58,16 @@
 
 h2 {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 .card {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 95%;
+        margin: 0 auto;
+    }
 }

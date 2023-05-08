@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useMediaQuery } from "react-responsive";
 import { Carousel } from "react-bootstrap";
-import styles from "../../styles/recent.module.css";
+import styles from "../../styles/latest.module.css";
 
 function RecentVenues() {
   const { data, loading, error } = ApiHook(
@@ -25,6 +25,7 @@ function RecentVenues() {
         {data.slice(0, 4).map((venue) => {
           return (
             <Carousel.Item key={venue.id}>
+              <h2>Recently Added Venues</h2>
               <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} price={venue.price} description={venue.description} />
             </Carousel.Item>
           );
@@ -41,12 +42,12 @@ function RecentVenues() {
           {data.slice(0, 8).map((venue) => {
             return (
               <Col
-                xs={12}
-                sm={6}
+                xs={10}
+                sm={7}
                 md={4}
                 lg={3}
                 key={venue.id}
-                className="col-12 col-sm-6 col-md-4 col-lg-3"
+                className="col-10 col-sm-7 col-md-4 col-lg-3"
               >
                 <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} price={venue.price} description={venue.description} />
               </Col>

@@ -1,34 +1,47 @@
 .bannerContainer {
     position: relative;
     max-width: 100%;
-
+    margin-bottom: 60px;
 }
 
-
-
 .homeBanner {
-    background-image: url("../../house\ in\ the\ forest.webp");
+    background-image: url("../../italy.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 25%;
+    background-position-y: 70%;
     width: 90%;
     margin: 0 auto;
-    height: 500px;
+    height: 600px;
     background-size: cover;
     position: relative;
 }
 
+.blur {
+    position: absolute;
+    backdrop-filter: blur(30px);
+    height: 15%;
+    width: 100%;
+    top: 70%;
+    color: white;
+}
+
+.discover {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
 .bannerBtn {
     border: none;
-    background-color: #1d67d66c;
-    padding: 10px 35px 10px 35px;
+    background-color: #79afff;
+    color: white;
+    padding: 9px 25px;
     border-radius: 7px;
-    margin-top: 20px;
     font-size: 1.1rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
 }
 
 .bannerBtn:hover {
