@@ -24,22 +24,20 @@ nav {
   display: flex;
   margin: 0;
   align-items: center;
-
+  z-index: 9;
 }
 
-.navbar li a {
+.navbar a {
   text-decoration: none;
   color: white;
-}
-
-nav ul li {
   list-style-type: none;
   display: inline;
   padding: 10px;
+  background-color: #747272;
 }
 
-.navbar li a:hover {
-  color: #9B1212;
+.navbar a:hover {
+  color: #9b1212;
 }
 
 footer {
@@ -55,8 +53,18 @@ footer {
   padding: 35px;
 }
 
-.loginBtn{
+.loginBtn {
   border: none;
   background-color: #747272;
   color: white;
+}
+
+.loginBtn:hover {
+  color: #9b1212;
+}
+
+.navbar-toggler {
+  position: relative;
+  top: -12px;
+  left: 10px;
 }

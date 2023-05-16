@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 function LogIn() {
-  const [setShowAlert] = useState(false);
+  const [alert, setAlert] = useState(false);
   const initialValues = { email: "", password: "" };
 
   const handleSubmit = async (values) => {
@@ -20,14 +20,17 @@ function LogIn() {
         },
         body: JSON.stringify(values),
       });
-  
+
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('user', JSON.stringify(data));
-        setShowAlert(true);
+        setAlert(true);
         toast.success('Login was great success!', {
           position: toast.POSITION.TOP_CENTER,
         });
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       } else {
         toast.error('Invalid email or password', {
           position: toast.POSITION.TOP_CENTER,
@@ -48,13 +51,8 @@ function LogIn() {
         const { handleSubmit } = formik;
         return (
           <Modal.Dialog>
-            <Modal.Header closeButton>
-              <Modal.Title>Log In</Modal.Title>
-            </Modal.Header>
             <Modal.Body>
               <Form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.wrap}></div>
-
                 <div>
                   <label>Email</label>
                   <Field
@@ -98,7 +96,7 @@ function LogIn() {
                 Log In
               </Button>
             </Modal.Footer>
-            <ToastContainer position="top-center" autoClose={5000} />
+            <ToastContainer position="top-center" autoClose={2500} />
           </Modal.Dialog>
         );
       }}

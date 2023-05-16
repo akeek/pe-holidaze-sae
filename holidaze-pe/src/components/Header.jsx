@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Modal } from "react-bootstrap";
+import { Modal, Nav, Navbar } from "react-bootstrap";
 import LogIn from "../pages/login/login";
+import { UserContext } from "../useContext/states";
+import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function CustomNavbar() {
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const { user, setUser } = React.useContext(UserContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const localStoredUser = JSON.parse(localStorage.getItem("user"));
+    setUser(
+      localStoredUser
+        ? { loggedIn: true, venueManager: localStoredUser.isVenueManager }
+        : { loggedIn: false, venueManager: false }
+    );
+  }, [setUser]);
+
+  function logout() {
+    if (window.confirm("Do you want to log out?")) {
+      setUser({ loggedIn: false, venueManager: false });
+      localStorage.clear();
+      navigate("/");
+    }
+  }
 
   const handleLoginClick = () => {
     setShowLoginModal(true);
@@ -15,26 +36,43 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <ul>
-        <li>
+    <Navbar expand="md">
+      <Navbar.Toggle aria-controls="navbar-nav" />
+      <Navbar.Collapse id="navbar-nav">
+        <Nav className="mr-auto">
           <Link to="/">Home</Link>
-        </li>
-        <li>
-          <button className="loginBtn" onClick={handleLoginClick}>
-            Log In
-          </button>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-        <li>
-          <Link to="/venues">Venues</Link>
-        </li>
-      </ul>
+          {user.loggedIn && (
+            <Nav.Link className="link">
+              <Link to="/profile">Profile</Link>
+            </Nav.Link>
+          )}
+          <Nav.Link className="link">
+            <Link to="/venues">Venues</Link>
+          </Nav.Link>
+        </Nav>
+        <Nav className="ml-auto">
+          {user.loggedIn ? (
+            <>
+              <Nav.Link className="link">
+                <button className="loginBtn" onClick={logout}>
+                  Log Out
+                </button>
+              </Nav.Link>
+            </>
+          ) : (
+            <>
+              <Nav.Link className="link">
+                <button className="loginBtn" onClick={handleLoginClick}>
+                  Log In
+                </button>
+              </Nav.Link>
+              <Nav.Link className="link">
+                <Link to="/register">Register</Link>
+              </Nav.Link>
+            </>
+          )}
+        </Nav>
+      </Navbar.Collapse>
       <Modal show={showLoginModal} onHide={handleCloseLoginModal}>
         <Modal.Header closeButton>
           <Modal.Title>Log In</Modal.Title>
@@ -43,7 +81,7 @@ function Navbar() {
           <LogIn handleClose={handleCloseLoginModal} />
         </Modal.Body>
       </Modal>
-    </nav>
+    </Navbar>
   );
 }
 
@@ -51,9 +89,9 @@ function Header() {
   return (
     <header>
       <div>
-        <h3>Project Exam</h3>
+        <h3>HOLIDAZE</h3>
       </div>
-      <Navbar />
+      <CustomNavbar />
     </header>
   );
 }
