@@ -19,7 +19,7 @@
 .blur {
     position: absolute;
     backdrop-filter: blur(30px);
-    height: 15%;
+    height: 15.5%;
     width: 100%;
     top: 70%;
     color: white;
@@ -27,7 +27,7 @@
 }
 
 .discover {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     padding: 0;
     margin-bottom: 2px;
 }
@@ -36,9 +36,9 @@
     border: none;
     background-color: #79afff;
     color: white;
-    padding: 9px 25px;
+    padding: 6px 18px;
     border-radius: 7px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
