@@ -11,13 +11,13 @@ function VenuesCard(props) {
       <div>
         <img src={media} alt="" className={styles.gridImg} />
         <div className={styles.cardinfo}>
-          <p>Location: {city}</p>
+          <p>{city}</p>
           <p>&#9733;{rating}</p>
         </div>
         <p className={styles.descinfo}>{description}</p>
         <p className={styles.priceinfo}>Per night: ${price}</p>
         <Link to={`/specific/${id}`} className={styles.banner}>
-          VIEW
+          More info
         </Link>
       </div>
     </Card>
