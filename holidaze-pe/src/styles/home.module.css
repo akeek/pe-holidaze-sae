@@ -34,7 +34,7 @@
 
 .bannerBtn {
     border: none;
-    background-color: #79afff;
+    background-color: #1d67d6;
     color: white;
     padding: 6px 18px;
     border-radius: 7px;
@@ -45,5 +45,5 @@
 }
 
 .bannerBtn:hover {
-    background-color: #1d67d6;
+    background-color: #79afff;
 }
