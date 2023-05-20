@@ -89,7 +89,7 @@ function Header() {
   return (
     <header>
       <div>
-        <h3>HOLIDAZE</h3>
+        <Link to="/" class="home">HOLIDAZE</Link>
       </div>
       <CustomNavbar />
     </header>
