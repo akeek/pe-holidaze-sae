@@ -9,9 +9,9 @@ function Home() {
       <div className={styles.bannerContainer}>
         <div className={styles.homeBanner}>
           <div className={styles.blur}>
-            <p className={styles.discover}>Discover more</p>
+            <p className={styles.adventure}>YOUR ADVENTURE STARTS HERE</p>
             <Link to="/venues">
-              <button className={styles.bannerBtn}>Venues</button>
+              <button className={styles.bannerBtn}>Discover venues</button>
             </Link>
           </div>
         </div>
