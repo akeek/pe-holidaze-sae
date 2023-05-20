@@ -6,6 +6,15 @@ body {
   margin: 0;
 }
 
+.home {
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+}
+
+.home:hover {
+  color: white;
+}
 
 header {
   height: 70px;
@@ -13,11 +22,6 @@ header {
   display: flex;
   padding: 20px 36px;
   justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-h3 {
-  color: #ffffff;
 }
 
 nav {
@@ -50,7 +54,7 @@ footer {
 .footerText {
   color: #ffffff;
   font-size: 1.2rem;
-  padding: 35px;
+  padding-top: 20px;
 }
 
 .loginBtn {
