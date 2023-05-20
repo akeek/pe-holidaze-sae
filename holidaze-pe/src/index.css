@@ -6,6 +6,12 @@ body {
   margin: 0;
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .home {
   text-decoration: none;
   color: white;
@@ -44,19 +50,6 @@ nav {
   color: #9b1212;
 }
 
-footer {
-  background-color: #747272;
-  height: 100px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.footerText {
-  color: #ffffff;
-  font-size: 1.2rem;
-  padding-top: 20px;
-}
-
 .loginBtn {
   border: none;
   background-color: #747272;
@@ -71,4 +64,17 @@ footer {
   position: relative;
   top: -12px;
   left: 10px;
+}
+
+footer {
+  background-color: #747272;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.footerText {
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding-top: 20px;
 }
