@@ -73,5 +73,6 @@ h2 {
     .card {
         width: 95%;
         margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
