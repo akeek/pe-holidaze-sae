@@ -4,10 +4,12 @@
 }
 
 .avatar {
-    max-width: 200px;
+    width: 200px;
+    height: 200px;
     position: relative;
     margin: 0 auto;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .url {
@@ -19,6 +21,7 @@
 .username {
     text-align: center;
     padding: 20px;
+    color: black;
 }
 
 .edit {
