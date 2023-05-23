@@ -1,0 +1,66 @@
+.avatarContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar {
+    max-width: 200px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.url {
+    width: 340px;
+    height: 30px;
+    font-size: small;
+}
+
+.username {
+    text-align: center;
+    padding: 20px;
+}
+
+.edit {
+    border: none;
+    background-color: var(--primary-color);
+    width: 230px;
+    margin: 10px auto;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+.edit:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.formBtn {
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 7px;
+}
+
+.formBtnClose {
+    border: none;
+    background-color: var(--primary-hover-color);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 7px;
+}
+
+.bookings {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.bookings li {
+    list-style-type: none;
+}
+
+.bookingsContainer {
+    text-align: center;
+}
