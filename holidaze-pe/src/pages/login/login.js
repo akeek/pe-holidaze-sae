@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { schemaLogin } from "../../components/SchemaReg";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import styles from "../../styles/login.module.css";
@@ -87,14 +87,14 @@ function LogIn() {
               </Form>
             </Modal.Body>
             <Modal.Footer>
-              <Button
+              <button
                 className={styles.formBtn}
                 onClick={() => {
                   handleSubmit();
                 }}
               >
                 Log In
-              </Button>
+              </button>
             </Modal.Footer>
             <ToastContainer position="top-center" autoClose={2500} />
           </Modal.Dialog>
