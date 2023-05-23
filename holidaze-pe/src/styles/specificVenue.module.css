@@ -1,0 +1,78 @@
+h2 {
+    padding-top: 20px;
+}
+
+.priceInfo {
+    text-align: center;
+}
+
+.carousel {
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.183);
+}
+
+.carousel img {
+    height: 300px;
+    object-fit: contain;
+}
+
+.venueImg {
+    display: block;
+    width: 100%;
+}
+
+.inc {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.icons {
+    gap: 30px;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    font-size: larger;
+}
+
+.des {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 1.1rem;
+}
+
+.availabilityContainer {
+    padding-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.availabilityHeading {
+    text-align: center;
+}
+
+.venueBtn {
+    border: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 35px;
+    border-radius: 7px;
+    font-size: 1.1rem;
+}
+
+.venueBtn:hover {
+    background-color: green;
+}
+
+@media screen and (max-width: 1000px) {
+    .carousel {
+        width: 95%;
+    }
+
+    .carousel img {
+        height: 200px;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
