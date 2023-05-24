@@ -49,6 +49,9 @@ function CustomNavbar() {
           <Nav.Link className="link">
             <Link to="/venues">Venues</Link>
           </Nav.Link>
+          <Nav.Link className="link">
+            <Link to="/datepicker">Date</Link>
+          </Nav.Link>
         </Nav>
         <Nav className="ml-auto">
           {user.loggedIn ? (
