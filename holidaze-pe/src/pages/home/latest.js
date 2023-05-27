@@ -14,8 +14,6 @@ function RecentVenues() {
 
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
 
-  console.log(data);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error</p>;
 
@@ -26,7 +24,7 @@ function RecentVenues() {
           return (
             <Carousel.Item key={venue.id}>
               <h2>Recently Added Venues</h2>
-              <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} price={venue.price} description={venue.description} />
+              <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} country={venue.location.country} price={venue.price} description={venue.description} />
             </Carousel.Item>
           );
         })}
@@ -49,7 +47,7 @@ function RecentVenues() {
                 key={venue.id}
                 className="col-10 col-sm-7 col-md-4 col-lg-3"
               >
-                <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} price={venue.price} description={venue.description} />
+                <VenuesCard media={venue.media} id={venue.id} rating={venue.rating} city={venue.location.city} country={venue.location.country} price={venue.price} description={venue.description} />
               </Col>
             );
           })}

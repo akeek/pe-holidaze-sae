@@ -12,7 +12,11 @@ function SpecificVenue() {
     if (loading) return <p>Loading</p>
     if (error) return <p>Error</p>
 
-    return <SpecificCard venue={data} venueId={params.id} />
+    return (
+        <div>
+            <SpecificCard venue={data} venueId={params.id} />
+        </div>
+    )
 }
 
 export default SpecificVenue;
