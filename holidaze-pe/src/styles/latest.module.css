@@ -10,18 +10,24 @@
     height: 2rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: black;
+}
+
+.cardLink:hover {
+    color: var(--primary-color);
 }
 
 .priceinfo {
     height: 2rem;
-    padding: 0 10px;
     font-weight: 300;
 }
 
 .descinfo {
     height: 3rem;
-    padding: 0 10px;
     font-weight: 300;
     color: grey;
     display: -webkit-box;
@@ -54,20 +60,25 @@
 }
 
 .carousel {
-    padding: 20px;
+    padding: 15px;
 }
 
 .carousel img {
     height: 300;
 }
 
-h2 {
+.recentContainer {
+    padding-bottom: 40px;
+}
+
+.recent {
     text-align: center;
     margin-bottom: 5px;
 }
 
 .card {
     margin-bottom: 30px;
+    border: none !important;
 }
 
 @media screen and (max-width: 1000px) {

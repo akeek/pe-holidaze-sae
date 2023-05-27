@@ -62,6 +62,18 @@
         font-size: 1.3rem;
     }
 
+    .homeBanner {
+        height: 400px;
+    }
+
+    .bannerContainer {
+        margin: 20px 0;
+    }
+
+    .bannerBtn {
+        font-size: 0.9rem;
+    }
+
     .blur {
         position: absolute;
         backdrop-filter: blur(10px);
@@ -75,7 +87,7 @@
 
     .adventure {
         position: relative;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
         vertical-align: middle;
         top: 15%;

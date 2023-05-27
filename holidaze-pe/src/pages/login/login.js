@@ -73,7 +73,7 @@ function LogIn() {
                   <label>Password</label>
                   <Field
                     className={styles.input}
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Enter your password"
                     readOnly={false}

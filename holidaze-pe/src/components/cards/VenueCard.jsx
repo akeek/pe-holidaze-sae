@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "../../styles/latest.module.css";
 import Card from "react-bootstrap/Card";
 
@@ -13,9 +12,11 @@ function VenuesCard(props) {
     destination = <p>Unknown location</p>
   }
 
+  const specificId = 'specific/' + id
+
   return (
     <Card className={styles.card}>
-      <div>
+      <a href={specificId} className={styles.cardLink}>
         <img src={media} alt="" className={styles.gridImg} />
         <div className={styles.cardinfo}>
           <p>{destination}</p>
@@ -23,10 +24,7 @@ function VenuesCard(props) {
         </div>
         <p className={styles.descinfo}>{description}</p>
         <p className={styles.priceinfo}>Per night: ${price}</p>
-        <Link to={`/specific/${id}`} className={styles.banner}>
-          More info
-        </Link>
-      </div>
+      </a>
     </Card>
   );
 }
