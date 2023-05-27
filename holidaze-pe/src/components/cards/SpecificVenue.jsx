@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { enGB } from "date-fns/locale";
 import styles from "../../styles/specificVenue.module.css";
 import { Carousel } from "react-bootstrap";
 import { FaWifi, FaParking, FaDog, FaUtensils } from "react-icons/fa";
@@ -184,6 +185,7 @@ function SpecificCard(props) {
                             onChange={(date) => setCheckinDate(date)}
                             filterDate={filterDate}
                             minDate={new Date(Date.now() + (3600 * 1000 * 24))}
+                            locale={enGB}
                             className={styles.dateWidth}
                         />
                     </div>
@@ -194,14 +196,15 @@ function SpecificCard(props) {
                             onChange={(date) => setCheckoutDate(date)}
                             filterDate={filterDate}
                             minDate={new Date(Date.now() + (3600 * 1000 * 24))}
+                            locale={enGB}
                             className={styles.dateWidth}
                         />
                     </div>
                 </div>
                 <div className={styles.priceInfo}>
                     <div>Price per night: ${price}</div>
-                    <div>Total nights: {totalNights}</div>
-                    <div>Total price: ${totalPrice}</div>
+                    <div>Total nights: {totalNights < 19539 ? totalNights : ""}</div>
+                    <div>Total price: ${totalPrice < 27159210 ? totalPrice : ""}</div>
                     <button className={styles.venueBtn} onClick={handleCheckAvailability}>
                         Book Venue
                     </button>
