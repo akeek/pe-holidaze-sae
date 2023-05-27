@@ -8,7 +8,6 @@ import Venues from "./pages/venues/venues";
 import Profile from "./pages/profile/profile";
 import RouteNotFound from "./pages/notfound/notfound";
 import Venue from "./pages/specificVenue/specificVenue";
-import Book from "./pages/specificVenue/book";
 import NotLoggedIn from './pages/error';
 
 
@@ -28,7 +27,6 @@ function App() {
         <Route path="/venues" element={<Venues />} />
         <Route path="/specific/:id" element={<Venue />} />
         <Route path="/profile" element={user ? <Profile /> : <Navigate replace to={"/error"} />} />
-        <Route path="/datepicker" element={<Book />} />
         <Route path="*" element={<RouteNotFound />} />
       </Route>
     </Routes>
