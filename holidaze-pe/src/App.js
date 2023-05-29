@@ -15,7 +15,6 @@ import NotLoggedIn from './pages/error';
 function App() {
 
   const user = localStorage.getItem("user");
-  console.log(user)
 
   return (
     <Routes>

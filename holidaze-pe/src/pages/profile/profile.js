@@ -1,14 +1,21 @@
 import React from "react";
-import UpdateAvatar from "./updateAvatar";
-import Bookings from "./bookings";
+import ProfileInfo from "../../components/profile/ProfileInfo";
+import ProfileVenues from "../../components/profile/Venues";
+import ProfileBookings from "../../components/profile/Bookings";
+import styles from "../../styles/profile.module.css"
 
 
 function Profile() {
     return (
-        <div>
-            <UpdateAvatar />
+        <div className={styles.profileContainer}>
+            <ProfileInfo />
             <hr></hr>
-            <Bookings />
+            <div className={styles.inline}>
+                <ProfileVenues />
+                <hr></hr>
+                <ProfileBookings />
+            </div>
+
         </div>
     );
 }

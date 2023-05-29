@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/profile.module.css";
+import styles from "../../styles/profile.module.css"
 import Modal from "react-bootstrap/Modal";
 
-function UpdateAvatar() {
+function ProfileInfo() {
     const [userName, setUserName] = useState("");
     const [showModal, setShowModal] = useState(false);
     const [avatar, setAvatar] = useState("");
     const [newAvatarUrl, setNewAvatarUrl] = useState("");
+    const [email, setEmail] = useState("")
 
     useEffect(() => {
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-
-        if (storedUser) {
-            setAvatar(storedUser.avatar);
-            setUserName(storedUser.name);
+        const data = JSON.parse(localStorage.getItem("user"));
+        if (data) {
+            setAvatar(data.avatar);
+            setUserName(data.name);
+            setEmail(data.email);
         }
     }, []);
 
@@ -31,14 +32,18 @@ function UpdateAvatar() {
         handleClose();
     };
 
+
     return (
-        <div>
-            <div>
-                <h2 className={styles.username}>{userName}</h2>
-            </div>
-            <div className={styles.avatarContainer}>
-                <img src={avatarImg} alt="Avatar" className={styles.avatar} />
-                <button className={styles.edit} onClick={handleShow}>Edit profilepicture</button>
+        <div className={styles.profileInfoContainer}>
+            <div className={styles.infoContainer}>
+                <div className={styles.info}>
+                    <h1 className={styles.username}>{userName}</h1>
+                    <p>E-mail: {email}</p>
+                </div>
+                <div className={styles.avatarContainer}>
+                    <img src={avatarImg} alt="Avatar" className={styles.avatar} />
+                    <button className={styles.edit} onClick={handleShow}>Edit profile picture</button>
+                </div>
             </div>
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -68,4 +73,4 @@ function UpdateAvatar() {
     );
 }
 
-export default UpdateAvatar;
+export default ProfileInfo;
